@@ -5,11 +5,12 @@
   --secondary-beige: #fbdabb;
   --highlight-lite: #edefee;
   --highlight-dark: #333333;
+  --section-title: 56px;
 }
 
 body {
-  padding: 0 1rem;
   font-family: "Karla", sans-serif;
+  background-color: var(--highlight-dark);
 }
 
 .section-grid {
@@ -18,10 +19,11 @@ body {
   background-color: bisque;
   column-gap: 5px;
   margin-top: 1rem;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .section-content-wrapper {
-  /* takes the center 8 grids in the 12 grid layout */
   grid-column: 3 / span 8;
 }
 
@@ -34,6 +36,10 @@ body {
   align-items: center;
 }
 
+.rounded {
+  border-radius: 16px;
+}
+
 nav {
   width: 70%;
   padding: 0 1rem;
@@ -42,11 +48,6 @@ nav ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
-}
-
-nav li,
-footer li {
-  /* list-style: none; */
 }
 
 nav a {
@@ -85,4 +86,53 @@ footer a:visited {
 
 .footer-item-wrapper {
   padding: 1rem 1rem;
+}
+
+.hero-section {
+  background-color: var(--primary-green);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.hero-image {
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.hero-title {
+  color: var(--primary-yellow);
+  font-size: var(--section-title);
+  font-family: "Markazi Text";
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-family: "Markazi Text";
+  color: white;
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  width: 85%;
+  line-height: 141%;
+}
+
+.hero-cta {
+  width: 180px;
+  border-radius: 16px;
+  background-color: var(--primary-yellow);
+  padding: 1rem;
+  border: none;
+  font-size: 18px;
 }
