@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+:root {
+  --primary-green: #495e57;
+  --primary-yellow: #f4ce14;
+  --secondary-orange: #ee9972;
+  --secondary-beige: #fbdabb;
+  --highlight-lite: #edefee;
+  --highlight-dark: #333333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 0 1rem;
+  font-family: "Karla", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: bisque;
+  column-gap: 5px;
+  margin-top: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section-content-wrapper {
+  /* takes the center 8 grids in the 12 grid layout */
+  grid-column: 3 / span 8;
+}
+
+.flex-container {
   display: flex;
-  flex-direction: column;
+}
+
+.header-wrapper {
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  width: 70%;
+  padding: 0 1rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav li,
+footer li {
+  /* list-style: none; */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+nav a:visited {
+  color: var(--primary-green);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 1rem;
+}
+
+.footer-subtitle {
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: black;
+}
+
+.footer-item-wrapper {
+  padding: 1rem 1rem;
 }
