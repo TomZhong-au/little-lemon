@@ -13,7 +13,9 @@ const TextContent = () => {
         We are a family owned Mediterranean restaurant, focused on traditional
         recipes served with a modern twist.
       </span>
-      <button className="hero-cta">Reserve a Table</button>
+      <a className="hero-cta" href="/booking">
+        Reserve a Table
+      </a>
     </div>
   );
 };

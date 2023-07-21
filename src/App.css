@@ -7,6 +7,9 @@
   --highlight-dark: #333333;
   --section-title: 56px;
 }
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Karla", sans-serif;
@@ -16,7 +19,7 @@ body {
 .section-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background-color: bisque;
+  background-color: white;
   column-gap: 5px;
   margin-top: 1rem;
   max-width: 1440px;
@@ -135,4 +138,12 @@ footer a:visited {
   padding: 1rem;
   border: none;
   font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero-cta:visited {
+  color: black;
 }

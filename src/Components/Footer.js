@@ -4,7 +4,7 @@ import Social from "./Footer/Social";
 
 const Footer = () => {
   return (
-    <footer className="section-grid">
+    <footer className="section-grid" style={{ backgroundColor: "bisque" }}>
       <div className="section-content-wrapper footer-grid">
         <div>
           <img src="./assets/logo.svg" alt="logo" />

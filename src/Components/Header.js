@@ -2,7 +2,7 @@ import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <header className="section-grid">
+    <header className="section-grid" style={{ backgroundColor: "bisque" }}>
       <div className="section-content-wrapper flex-container header-wrapper">
         <div>
           <img src="./assets/logo.svg" alt="logo" />
