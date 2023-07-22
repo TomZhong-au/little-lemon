@@ -7,6 +7,7 @@ import Layout from "./Components/Layout";
 import Homepage from "./pages/Homepage";
 import "./App.css";
 import BookingPage from "./pages/BookingPage";
+import BookingConfirmPage from "./pages/BookingConfirmPage";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/booking",
         element: <BookingPage />,
+      },
+      {
+        path: "/confirm",
+        element: <BookingConfirmPage />,
       },
     ],
   },

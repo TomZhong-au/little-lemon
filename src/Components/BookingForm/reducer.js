@@ -1,7 +1,7 @@
-export const updateTimes = (date) => {
-  return ["17:00", "18:00", "19:00", "20:00"];
+export const updateTimes = (state, { payload }) => {
+  return fetchAPI(payload); // eslint-disable-line
 };
 
 export const initialzeTimes = () => {
-  return ["17:00", "18:00", "19:00", "20:00"];
+  return fetchAPI(new Date()); // eslint-disable-line
 };
