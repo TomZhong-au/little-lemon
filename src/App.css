@@ -147,3 +147,16 @@ footer a:visited {
 .hero-cta:visited {
   color: black;
 }
+
+.booking-title {
+  font-size: var(--section-title);
+  font-family: "Markazi Text";
+  color: var(--primary-green);
+}
+
+.booking-section {
+  justify-content: center;
+  padding: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+}

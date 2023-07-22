@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import TimeSlots from "./TimeSlots";
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, changeTimes }) => {
   const [date, setDate] = useState("");
   const formRef = useRef(null);
 
@@ -17,7 +17,12 @@ const BookingForm = () => {
 
   return (
     <form
-      style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
+      style={{
+        display: "grid",
+        maxWidth: "200px",
+        gap: "20px",
+        marginBottom: "2rem",
+      }}
       onSubmit={handleSubmit}
       ref={formRef}
     >
@@ -25,14 +30,20 @@ const BookingForm = () => {
       <input
         type="date"
         id="res-date"
-        onChange={(e) => setDate(e.target.value)}
         value={date}
         name="date"
+        onChange={(e) => {
+          setDate(e.target.value);
+          //change available times according to date value
+          changeTimes(e.target.value);
+        }}
       />
 
       <label htmlFor="res-time">Choose time</label>
       <select id="res-time" name="time">
-        <TimeSlots date={date} />
+        {availableTimes.map((time) => (
+          <option key={time}>{time}</option>
+        ))}
       </select>
 
       <label htmlFor="guests">Number of guests</label>
