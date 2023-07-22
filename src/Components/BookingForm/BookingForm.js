@@ -1,49 +1,58 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useRef, useState } from "react";
+import TimeSlots from "./TimeSlots";
 
-const defaultValues = {
-  date: getTodayDateString(),
-  time: "18:00",
-  number: 2,
-  occasion: "Birthday",
-};
 const BookingForm = () => {
+  const [date, setDate] = useState("");
+  const formRef = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const values = new FormData(formRef.current);
+
+    for (const value of values) {
+      console.log(value);
+    }
+  };
+
   return (
-    <Formik
-      initialValues={defaultValues}
-      onSubmit={(values) => {
-        console.log(values);
-      }}
+    <form
+      style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
+      onSubmit={handleSubmit}
+      ref={formRef}
     >
-      {(formik) => (
-        <Form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
-          <label htmlFor="res-date">Choose date</label>
-          <Field type="date" name="date" />
-          <ErrorMessage name="date" />
+      <label htmlFor="res-date">Choose date</label>
+      <input
+        type="date"
+        id="res-date"
+        onChange={(e) => setDate(e.target.value)}
+        value={date}
+        name="date"
+      />
 
-          <label htmlFor="res-time">Choose time</label>
-          <Field name="time" as="select">
-            <option>17:00</option>
-            <option>18:00</option>
-            <option>19:00</option>
-            <option>20:00</option>
-            <option>21:00</option>
-            <option>22:00</option>
-          </Field>
-          <ErrorMessage name="time" />
+      <label htmlFor="res-time">Choose time</label>
+      <select id="res-time" name="time">
+        <TimeSlots date={date} />
+      </select>
 
-          <label htmlFor="guests">Number of guests</label>
-          <Field type="number" placeholder="1" min="1" max="10" name="number" />
+      <label htmlFor="guests">Number of guests</label>
+      <input
+        type="number"
+        placeholder="1"
+        min="1"
+        max="10"
+        id="guests"
+        name="guests"
+      />
 
-          <label htmlFor="occasion">Occasion</label>
-          <Field name="occasion" as="select">
-            <option>Birthday</option>
-            <option>Anniversary</option>
-          </Field>
+      <label htmlFor="occasion">Occasion</label>
+      <select id="occasion" name="occasion">
+        <option>Birthday</option>
+        <option>Anniversary</option>
+      </select>
 
-          <input type="submit" value="Make Your reservation" />
-        </Form>
-      )}
-    </Formik>
+      <input type="submit" value="Make Your reservation" />
+    </form>
   );
 };
 
