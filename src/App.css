@@ -192,6 +192,11 @@ footer a:visited {
   margin: 1rem 0;
 }
 
+.booking-input:focus {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 3px;
+}
+
 select option {
   padding: 1.2rem;
 }
@@ -200,4 +205,71 @@ select option {
   color: rgb(194, 2, 2);
   margin-bottom: 1rem;
   width: 100%;
+}
+
+.special-title {
+  font-size: var(--section-title);
+  font-family: "Markazi Text";
+  font-weight: 300;
+}
+
+.menu-photo {
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.menucard-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.menu-card {
+  width: 265px;
+  height: 439px;
+  background-color: var(--highlight-lite);
+  position: relative;
+  border-radius: 16px 16px 0 0;
+}
+
+.menu-card:hover {
+  box-shadow: 0 0 5px 3px var(--primary-yellow);
+  cursor: pointer;
+}
+
+.menu-card-price {
+  color: var(--secondary-orange);
+  font-weight: 600;
+}
+
+.menu-card-price::before {
+  content: "$";
+  padding-right: 0.5rem;
+}
+
+.menu-name {
+  font-family: "Markazi Text";
+  font-size: 24px;
+}
+
+.menu-card-description {
+  color: var(--primary-green);
+  line-height: auto;
+}
+
+.menu-card-order-btn {
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+.delivery-btn {
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--highlight-dark);
+  cursor: pointer;
+}
+
+.delivery-btn:active {
+  outline: 1px solid var(--primary-green);
+  outline-offset: 3px;
 }

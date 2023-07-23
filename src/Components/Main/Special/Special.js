@@ -1,5 +1,27 @@
+import MenuCard from "./MenuCard";
+import { menuData } from "./menuData";
+
 const Special = () => {
-  return <section></section>;
+  return (
+    <section className="section-grid">
+      <div className="section-content-wrapper" style={{ marginBottom: "3rem" }}>
+        <div
+          className="flex-container"
+          style={{ justifyContent: "space-between", alignItems: "center" }}
+        >
+          <h1 className="special-title">This weeks special!</h1>
+          <a href="/" className="hero-cta">
+            Online Menu
+          </a>
+        </div>
+        <div className="menucard-wrapper">
+          {menuData.map((menu) => (
+            <MenuCard {...menu} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Special;
