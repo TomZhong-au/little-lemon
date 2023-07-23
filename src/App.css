@@ -195,3 +195,9 @@ footer a:visited {
 select option {
   padding: 1.2rem;
 }
+
+.booking-err-msg {
+  color: rgb(194, 2, 2);
+  margin-bottom: 1rem;
+  width: 100%;
+}

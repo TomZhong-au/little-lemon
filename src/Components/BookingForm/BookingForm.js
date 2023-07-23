@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { PrimaryButton } from "../Buttons";
 import { Formik, Form, Field, ErrorMessage, useFormikContext } from "formik";
-import { initialValues } from "./formik";
+import { initialValues, validationSchema } from "./formik";
 
 const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
   return (
@@ -9,15 +9,14 @@ const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
       <h1 className="booking-title">Book a Table</h1>
       <Formik
         initialValues={initialValues}
+        validationSchema={validationSchema}
         onSubmit={(values) => submitForm(values)}
       >
         {(formik) => (
           <Form
             style={{
-              maxWidth: "300px",
-              gap: "20px",
+              width: "350px",
               marginBottom: "2rem",
-              alignItems: "center",
             }}
           >
             <label htmlFor="res-date">Choose date</label>
@@ -27,7 +26,9 @@ const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
               id="res-date"
               name="date"
             />
-            <ErrorMessage name="date" />
+            <div className="booking-err-msg">
+              <ErrorMessage name="date" />
+            </div>
 
             <label htmlFor="res-time">Choose time</label>
             <Field
@@ -42,7 +43,9 @@ const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
                 </option>
               ))}
             </Field>
-            <ErrorMessage name="time" />
+            <div className="booking-err-msg">
+              <ErrorMessage name="time" />
+            </div>
 
             <label htmlFor="guests">Number of guests</label>
             <Field
@@ -53,7 +56,9 @@ const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
               id="guests"
               name="guests"
             />
-            <ErrorMessage name="guests" />
+            <div className="booking-err-msg">
+              <ErrorMessage name="guests" />
+            </div>
 
             <label htmlFor="occasion">Occasion</label>
             <Field
@@ -65,7 +70,9 @@ const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
               <option>Birthday</option>
               <option>Anniversary</option>
             </Field>
-            <ErrorMessage name="occasion" />
+            <div className="booking-err-msg">
+              <ErrorMessage name="occasion" />
+            </div>
 
             <div
               style={{

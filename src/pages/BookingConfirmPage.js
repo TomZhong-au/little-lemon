@@ -7,7 +7,6 @@ const BookingConfirmPage = () => {
       style={{ backgroundColor: "#edefee", height: "65vh" }}
     >
       <div className="section-content-wrapper flex-container booking-section">
-        <h1 className="booking-title">Booking Successful.</h1>
         <ConfirmBooking />
       </div>
     </main>

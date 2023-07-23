@@ -1,6 +1,11 @@
 export const PrimaryButton = ({ icon, children, onClick, disabled }) => {
   return (
-    <button className="primary-btn" onClick={onClick} disabled={disabled}>
+    <button
+      className="primary-btn"
+      onClick={onClick}
+      disabled={disabled}
+      aria-label="On Click"
+    >
       <div
         style={{
           display: "flex",
@@ -18,7 +23,12 @@ export const PrimaryButton = ({ icon, children, onClick, disabled }) => {
 
 export const SecondaryButton = ({ icon, children, onClick, disabled }) => {
   return (
-    <button className="secondary-btn" onClick={onClick} disabled={disabled}>
+    <button
+      className="secondary-btn"
+      onClick={onClick}
+      disabled={disabled}
+      aria-label="On Click"
+    >
       <div
         style={{
           display: "flex",

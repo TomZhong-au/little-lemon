@@ -1,3 +1,5 @@
+import { fetchAPI } from "../../mock/API.mock";
+
 export const updateTimes = (state, { payload }) => {
   return fetchAPI(payload); // eslint-disable-line
 };

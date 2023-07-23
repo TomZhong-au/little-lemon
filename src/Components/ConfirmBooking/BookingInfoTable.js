@@ -1,5 +1,6 @@
 const BookingInfoTable = ({ bookinginfo }) => {
   const { date, time, guests, occasion } = bookinginfo;
+
   return (
     <table style={{ fontSize: "1.2rem" }}>
       <tbody>

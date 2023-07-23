@@ -2,8 +2,17 @@ import { PrimaryButton, SecondaryButton } from "../Buttons";
 import { BsCalendarDay } from "react-icons/bs";
 import { AiOutlineHome } from "react-icons/ai";
 import BookingInfoTable from "./BookingInfoTable";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-const ConfirmBooking = ({ bookingInfo, handleNewBooking, directToHome }) => {
+const ConfirmBooking = () => {
+  const [bookingInfo, setBookingInfo] = useState({});
+  useEffect(() => {
+    const value = localStorage.getItem("confirmedBooking");
+    if (value) setBookingInfo(JSON.parse(value));
+  }, []);
+
+  const navigate = useNavigate();
   return (
     <>
       <h1 className="booking-title">Booking Success </h1>
@@ -21,14 +30,14 @@ const ConfirmBooking = ({ bookingInfo, handleNewBooking, directToHome }) => {
       >
         <PrimaryButton
           icon={<BsCalendarDay size={"20px"} />}
-          onClick={handleNewBooking}
+          onClick={() => navigate("/booking")}
         >
           Another Booking
         </PrimaryButton>
 
         <SecondaryButton
           icon={<AiOutlineHome size={"20px"} />}
-          onClick={directToHome}
+          onClick={() => navigate("/")}
         >
           Back to Home
         </SecondaryButton>
