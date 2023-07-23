@@ -1,6 +1,6 @@
-export const PrimaryButton = ({ icon, children, onClick }) => {
+export const PrimaryButton = ({ icon, children, onClick, disabled }) => {
   return (
-    <button className="primary-btn" onClick={onClick}>
+    <button className="primary-btn" onClick={onClick} disabled={disabled}>
       <div
         style={{
           display: "flex",
@@ -8,17 +8,17 @@ export const PrimaryButton = ({ icon, children, onClick }) => {
           justifyContent: "space-evenly",
         }}
       >
-        <span style={{ paddingRight: ".25rem" }}>{icon}</span>
+        {icon ? <span style={{ paddingRight: ".5rem" }}>{icon}</span> : null}
 
-        <span style={{ paddingLeft: ".25rem" }}>{children}</span>
+        <span>{children}</span>
       </div>
     </button>
   );
 };
 
-export const SecondaryButton = ({ icon, children, onClick }) => {
+export const SecondaryButton = ({ icon, children, onClick, disabled }) => {
   return (
-    <button className="secondary-btn" onClick={onClick}>
+    <button className="secondary-btn" onClick={onClick} disabled={disabled}>
       <div
         style={{
           display: "flex",
@@ -26,9 +26,9 @@ export const SecondaryButton = ({ icon, children, onClick }) => {
           justifyContent: "space-evenly",
         }}
       >
-        <span style={{ paddingRight: ".25rem" }}>{icon}</span>
+        {icon ? <span style={{ paddingRight: ".5rem" }}>{icon}</span> : null}
 
-        <span style={{ paddingLeft: ".25rem" }}>{children}</span>
+        <span>{children}</span>
       </div>
     </button>
   );

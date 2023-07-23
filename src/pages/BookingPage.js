@@ -19,8 +19,9 @@ const BookingPage = () => {
   const navigate = useNavigate();
 
   const submitForm = (formData) => {
-    setBookingInfo(formDataToObject(formData));
-    setBookingSucess(submitAPI(formData)); //eslint-disable-line
+    setBookingInfo(formData);
+    const result = submitAPI(formData); //eslint-disable-line
+    setBookingSucess(result);
     return;
   };
 

@@ -1,82 +1,95 @@
-import { useRef, useState } from "react";
+import { useEffect } from "react";
 import { PrimaryButton } from "../Buttons";
+import { Formik, Form, Field, ErrorMessage, useFormikContext } from "formik";
+import { initialValues } from "./formik";
 
 const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
-  const [date, setDate] = useState("");
-  const formRef = useRef(null);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const values = new FormData(formRef.current);
-    submitForm(values);
-  };
-
   return (
     <>
       <h1 className="booking-title">Book a Table</h1>
-      <form
-        style={{
-          // display: "grid",
-          maxWidth: "350px",
-          gap: "20px",
-          marginBottom: "2rem",
-          alignItems: "center",
-        }}
-        onSubmit={handleSubmit}
-        ref={formRef}
+      <Formik
+        initialValues={initialValues}
+        onSubmit={(values) => submitForm(values)}
       >
-        <label htmlFor="res-date">Choose date</label>
-        <input
-          className="booking-input"
-          type="date"
-          id="res-date"
-          value={date}
-          name="date"
-          onChange={(e) => {
-            setDate(e.target.value);
-            //change available times according to date value
-            changeTimes({ payload: e.target.value });
-          }}
-        />
+        {(formik) => (
+          <Form
+            style={{
+              maxWidth: "300px",
+              gap: "20px",
+              marginBottom: "2rem",
+              alignItems: "center",
+            }}
+          >
+            <label htmlFor="res-date">Choose date</label>
+            <Field
+              className="booking-input"
+              type="date"
+              id="res-date"
+              name="date"
+            />
+            <ErrorMessage name="date" />
 
-        <label htmlFor="res-time">Choose time</label>
-        <select id="res-time" name="time" className="booking-input">
-          {availableTimes.map((time) => (
-            <option key={time} className="booking-input">
-              {time}
-            </option>
-          ))}
-        </select>
+            <label htmlFor="res-time">Choose time</label>
+            <Field
+              id="res-time"
+              name="time"
+              className="booking-input"
+              as="select"
+            >
+              {availableTimes.map((time) => (
+                <option key={time} className="booking-input">
+                  {time}
+                </option>
+              ))}
+            </Field>
+            <ErrorMessage name="time" />
 
-        <label htmlFor="guests">Number of guests</label>
-        <input
-          className="booking-input"
-          type="number"
-          min="1"
-          max="10"
-          id="guests"
-          name="guests"
-          defaultValue={1}
-        />
+            <label htmlFor="guests">Number of guests</label>
+            <Field
+              className="booking-input"
+              type="number"
+              min="1"
+              max="10"
+              id="guests"
+              name="guests"
+            />
+            <ErrorMessage name="guests" />
 
-        <label htmlFor="occasion">Occasion</label>
-        <select id="occasion" name="occasion" className="booking-input">
-          <option>Birthday</option>
-          <option>Anniversary</option>
-        </select>
+            <label htmlFor="occasion">Occasion</label>
+            <Field
+              id="occasion"
+              name="occasion"
+              className="booking-input"
+              as="select"
+            >
+              <option>Birthday</option>
+              <option>Anniversary</option>
+            </Field>
+            <ErrorMessage name="occasion" />
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "2rem",
-          }}
-        >
-          <PrimaryButton>Make Your reservation</PrimaryButton>
-        </div>
-      </form>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "2rem",
+              }}
+            >
+              <PrimaryButton disabled={!formik.isValid}>Confirm</PrimaryButton>
+              <FormikObserver changeTimes={changeTimes} />
+            </div>
+          </Form>
+        )}
+      </Formik>
     </>
   );
 };
 
 export default BookingForm;
+
+const FormikObserver = ({ changeTimes }) => {
+  const { values } = useFormikContext();
+
+  useEffect(() => {
+    changeTimes({ payload: values.date });
+  }, [values.date, changeTimes]);
+};
