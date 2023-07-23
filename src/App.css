@@ -7,6 +7,9 @@
   --highlight-dark: #333333;
   --section-title: 56px;
 }
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Karla", sans-serif;
@@ -16,7 +19,7 @@ body {
 .section-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background-color: bisque;
+  background-color: white;
   column-gap: 5px;
   margin-top: 1rem;
   max-width: 1440px;
@@ -135,4 +138,138 @@ footer a:visited {
   padding: 1rem;
   border: none;
   font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero-cta:visited {
+  color: black;
+}
+
+.booking-title {
+  font-size: var(--section-title);
+  font-family: "Markazi Text";
+  color: var(--primary-green);
+}
+
+.booking-section {
+  justify-content: center;
+  padding: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primary-btn {
+  border-radius: 16px;
+  background-color: var(--primary-yellow);
+  padding: 1rem;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  border-radius: 16px;
+  background-color: var(--primary-green);
+  color: white;
+  padding: 1rem;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.booking-input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.375rem;
+  border-width: 0;
+  width: 100%;
+  color: #111827;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  margin: 1rem 0;
+}
+
+.booking-input:focus {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 3px;
+}
+
+select option {
+  padding: 1.2rem;
+}
+
+.booking-err-msg {
+  color: rgb(194, 2, 2);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.special-title {
+  font-size: var(--section-title);
+  font-family: "Markazi Text";
+  font-weight: 300;
+}
+
+.menu-photo {
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.menucard-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.menu-card {
+  width: 265px;
+  height: 439px;
+  background-color: var(--highlight-lite);
+  position: relative;
+  border-radius: 16px 16px 0 0;
+}
+
+.menu-card:hover {
+  box-shadow: 0 0 5px 3px var(--primary-yellow);
+  cursor: pointer;
+}
+
+.menu-card-price {
+  color: var(--secondary-orange);
+  font-weight: 600;
+}
+
+.menu-card-price::before {
+  content: "$";
+  padding-right: 0.5rem;
+}
+
+.menu-name {
+  font-family: "Markazi Text";
+  font-size: 24px;
+}
+
+.menu-card-description {
+  color: var(--primary-green);
+  line-height: auto;
+}
+
+.menu-card-order-btn {
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+.delivery-btn {
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--highlight-dark);
+  cursor: pointer;
+}
+
+.delivery-btn:active {
+  outline: 1px solid var(--primary-green);
+  outline-offset: 3px;
 }

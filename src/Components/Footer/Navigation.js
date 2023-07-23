@@ -7,7 +7,7 @@ const Navigation = () => {
       <SubTitle>Navigation</SubTitle>
       <ul>
         {navigation.map(({ text, url }) => (
-          <li>
+          <li key={text}>
             <a href={url}>{text}</a>
           </li>
         ))}

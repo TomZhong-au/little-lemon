@@ -12,7 +12,7 @@ const Nav = () => {
     <nav>
       <ul>
         {navigation.map(({ text, url }) => (
-          <li>
+          <li key={text}>
             <a href={url}>{text}</a>
           </li>
         ))}

@@ -12,7 +12,7 @@ const Social = () => {
       <SubTitle>Social</SubTitle>
       <ul>
         {social.map(({ text, url }) => (
-          <li>{text}</li>
+          <li key={text}>{text}</li>
         ))}
       </ul>
     </ItemWrapper>

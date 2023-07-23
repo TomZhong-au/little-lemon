@@ -11,7 +11,7 @@ const Contact = () => {
       <SubTitle>Contact</SubTitle>
       <ul>
         {contact.map(({ text, url }) => (
-          <li>{text}</li>
+          <li key={text}>{text}</li>
         ))}
       </ul>
     </ItemWrapper>
