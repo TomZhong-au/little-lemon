@@ -32,6 +32,6 @@ nav a:visited {
 }
 
 .currentPage {
-  font-weight: bold;
+  font-weight: 600;
   border-bottom: 2px solid var(--primary-green);
 }

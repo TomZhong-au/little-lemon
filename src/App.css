@@ -13,7 +13,7 @@
 
 body {
   font-family: "Karla", sans-serif;
-  background-color: var(--highlight-dark);
+  /* background-color: var(--highlight-dark); */
 }
 
 .section-grid {
@@ -41,27 +41,6 @@ body {
 .rounded {
   border-radius: 16px;
 }
-
-/* nav {
-  width: 70%;
-  padding: 0 1rem;
-}
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 1rem 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--primary-green);
-  font-weight: bold;
-}
-
-nav a:visited {
-  color: var(--primary-green);
-} */
 
 .footer-grid {
   display: grid;
