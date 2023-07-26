@@ -16,7 +16,7 @@ body {
   /* background-color: var(--highlight-dark); */
 }
 
-.section-grid {
+/* .section-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-color: white;
@@ -27,6 +27,15 @@ body {
 
 .section-content-wrapper {
   grid-column: 3 / span 8;
+} */
+
+.section-grid {
+}
+
+.section-content-wrapper {
+  max-width: 61.625rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flex-container {
@@ -238,17 +247,4 @@ select option {
 .menu-card-order-btn {
   position: absolute;
   bottom: 1.5rem;
-}
-
-.delivery-btn {
-  border: none;
-  font-weight: bold;
-  font-size: 16px;
-  color: var(--highlight-dark);
-  cursor: pointer;
-}
-
-.delivery-btn:active {
-  outline: 1px solid var(--primary-green);
-  outline-offset: 3px;
 }

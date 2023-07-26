@@ -1,5 +1,6 @@
-import MenuCard from "./MenuCard";
+import MenuCard from "./MenuCard/MenuCard";
 import { menuData } from "./menuData";
+import styles from "./Special.module.css";
 
 const Special = () => {
   return (
@@ -14,7 +15,7 @@ const Special = () => {
             Online Menu
           </a>
         </div>
-        <div className="menucard-wrapper">
+        <div className={styles.menuCardsWrapper}>
           {menuData.map((menu) => (
             <MenuCard {...menu} />
           ))}

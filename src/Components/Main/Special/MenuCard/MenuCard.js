@@ -1,17 +1,18 @@
 import Delivery from "./Delivery";
+import styles from "./MenuCard.module.css";
 
 export default function MenuCard({ name, price, description, photo }) {
   return (
-    <div className="menu-card">
+    <div className={styles.cardWrapper}>
       <div
         aria-label="menu photo"
-        style={{ width: "265px", height: "175px", overflow: "hidden" }}
+        // style={{ width: "265px", height: "175px", overflow: "hidden" }}
       >
         <img
           src={`./assets/${photo}`}
           alt="menu"
           width={265}
-          className="menu-photo"
+          className={styles.photo}
         />
       </div>
 
@@ -23,13 +24,14 @@ export default function MenuCard({ name, price, description, photo }) {
             marginBottom: "2rem",
           }}
         >
-          <div aria-label="menu name" className="menu-name">
+          <div aria-label="menu name" className={styles.name}>
             {name}
           </div>
-          <div className="menu-card-price">{price.toFixed(2)}</div>
+
+          <div className={styles.price}>{price.toFixed(2)}</div>
         </div>
-        <div className="menu-card-description">{description}</div>
-        <div className="menu-card-order-btn">
+        <div className={styles.description}>{description}</div>
+        <div className={styles.deliveryBtnWrapper}>
           <Delivery />
         </div>
       </div>

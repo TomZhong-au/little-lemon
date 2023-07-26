@@ -2,9 +2,10 @@ const TextContent = () => {
   return (
     <div
       style={{
-        width: "30%",
+        width: "35%",
         display: "flex",
         flexDirection: "column",
+        paddingLeft: "1rem",
       }}
     >
       <h2 className="hero-title" aria-label="restaurant name">
