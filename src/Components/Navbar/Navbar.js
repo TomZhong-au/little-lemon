@@ -8,14 +8,14 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        {NAVLINKS.map(({ text, url }) => (
+        {NAVLINKS.map(({ text, path }) => (
           <li
             key={text}
             className={`${style.navlist} ${
-              pathname === url ? style.currentPage : ""
+              pathname === path ? style.currentPage : ""
             }`}
           >
-            <a href={url} className="nav-link">
+            <a href={path} className="nav-link">
               {text}
             </a>
           </li>

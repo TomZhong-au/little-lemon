@@ -42,6 +42,7 @@
 .description {
   color: var(--primary-green);
   line-height: auto;
+  line-height: 130%;
 }
 
 .deliveryBtnWrapper {

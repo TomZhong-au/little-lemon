@@ -6,9 +6,9 @@ const Navigation = () => {
     <ItemWrapper>
       <SubTitle>Navigation</SubTitle>
       <ul>
-        {NAVLINKS.map(({ text, url }) => (
+        {NAVLINKS.map(({ text, path }) => (
           <li key={text}>
-            <a href={url}>{text}</a>
+            <a href={path}>{text}</a>
           </li>
         ))}
       </ul>

@@ -8,22 +8,28 @@ import Homepage from "./pages/Homepage";
 import "./App.css";
 import BookingPage from "./pages/BookingPage";
 import BookingConfirmPage from "./pages/BookingConfirmPage";
+import { ROUTES } from "./pages/routes";
+import UnderConstruction from "./pages/UnderConstruction";
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: ROUTES.home.path,
         element: <Homepage />,
       },
       {
-        path: "/booking",
+        path: ROUTES.booking.path,
         element: <BookingPage />,
       },
       {
-        path: "/confirm",
+        path: ROUTES.confirm.path,
         element: <BookingConfirmPage />,
+      },
+      {
+        path: ROUTES.about.path,
+        element: <UnderConstruction />,
       },
     ],
   },

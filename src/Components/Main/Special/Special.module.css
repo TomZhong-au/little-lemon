@@ -5,3 +5,9 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
+
+.title {
+  font-size: var(--section-title);
+  font-family: "Markazi Text";
+  font-weight: 300;
+}
