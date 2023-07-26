@@ -1,4 +1,4 @@
-import { navigation } from "../Nav";
+import { NAVLINKS } from "../../pages/routes";
 import { ItemWrapper, SubTitle } from "./Styles";
 
 const Navigation = () => {
@@ -6,7 +6,7 @@ const Navigation = () => {
     <ItemWrapper>
       <SubTitle>Navigation</SubTitle>
       <ul>
-        {navigation.map(({ text, url }) => (
+        {NAVLINKS.map(({ text, url }) => (
           <li key={text}>
             <a href={url}>{text}</a>
           </li>

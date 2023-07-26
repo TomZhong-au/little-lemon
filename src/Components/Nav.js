@@ -1,3 +1,5 @@
+import { NAVLINKS } from "../pages/routes";
+
 export const navigation = [
   { text: "Home", url: "/" },
   { text: "About", url: "/" },
@@ -11,7 +13,7 @@ const Nav = () => {
   return (
     <nav>
       <ul>
-        {navigation.map(({ text, url }) => (
+        {NAVLINKS.map(({ text, url }) => (
           <li key={text}>
             <a href={url}>{text}</a>
           </li>
