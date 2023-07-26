@@ -1,0 +1,37 @@
+@import "../../App.css";
+
+nav {
+  width: 70%;
+  padding: 0 1rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  /* padding: 1rem 0; */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-green);
+  /* font-weight: bold; */
+}
+
+nav a:visited {
+  color: var(--primary-green);
+}
+
+.navlist {
+  padding: 0.5rem;
+  border-radius: 8px 8px 0 0;
+  font-weight: 500;
+}
+
+.navlist:hover {
+  background-color: gainsboro;
+}
+
+.currentPage {
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary-green);
+}
