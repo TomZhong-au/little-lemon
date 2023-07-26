@@ -2,7 +2,7 @@ const TextContent = () => {
   return (
     <div
       style={{
-        width: "35%",
+        width: "50%",
         display: "flex",
         flexDirection: "column",
         paddingLeft: "1rem",

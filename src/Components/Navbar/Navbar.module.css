@@ -12,8 +12,10 @@ nav ul {
 }
 
 nav a {
+  text-transform: uppercase;
   text-decoration: none;
   color: var(--primary-green);
+  font-size: 1.2rem;
   /* font-weight: bold; */
 }
 
@@ -25,6 +27,7 @@ nav a:visited {
   padding: 0.5rem;
   border-radius: 8px 8px 0 0;
   font-weight: 500;
+  transition: 0.3s ease-in-out;
 }
 
 .navlist:hover {

@@ -47,6 +47,7 @@ h3 {
   padding: 1.875rem 0 1.875rem 0;
   text-align: center;
   color: var(--primary-green);
+  border-top: 0.5rem solid var(--primary-green);
 }
 
 .flex-container {
@@ -56,6 +57,10 @@ h3 {
 .header-wrapper {
   justify-content: space-between;
   align-items: center;
+}
+
+.header-section {
+  padding: 0.5rem;
 }
 
 .rounded {

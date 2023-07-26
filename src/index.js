@@ -28,7 +28,20 @@ const router = createBrowserRouter([
         element: <BookingConfirmPage />,
       },
       {
+        path: ROUTES.menu.path,
+        element: <UnderConstruction />,
+      },
+      {
         path: ROUTES.about.path,
+        element: <UnderConstruction />,
+      },
+
+      {
+        path: ROUTES.order.path,
+        element: <UnderConstruction />,
+      },
+      {
+        path: ROUTES.login.path,
         element: <UnderConstruction />,
       },
     ],
