@@ -9,7 +9,6 @@ const UnderConstruction = () => {
       </div>
       <h2>Page under construction</h2>
 
-      {/* <Link to={ROUTES.home.path}>Back to Homepage</Link> */}
       <div>
         <SecondaryNavButton href={ROUTES.home.path}>
           Back to Home
