@@ -1,9 +1,7 @@
-import { PrimaryButton, SecondaryButton } from "../Buttons";
-import { BsCalendarDay } from "react-icons/bs";
-import { AiOutlineHome } from "react-icons/ai";
 import BookingInfoTable from "./BookingInfoTable";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { SecondaryNavButton } from "../NavigationButton/NavigationButton";
+import { ROUTES } from "../../pages/routes";
 
 const ConfirmBooking = () => {
   const [bookingInfo, setBookingInfo] = useState({});
@@ -12,7 +10,6 @@ const ConfirmBooking = () => {
     if (value) setBookingInfo(JSON.parse(value));
   }, []);
 
-  const navigate = useNavigate();
   return (
     <>
       <h1 className="booking-title">Booking Success </h1>
@@ -28,19 +25,13 @@ const ConfirmBooking = () => {
           marginTop: "5rem",
         }}
       >
-        <PrimaryButton
-          icon={<BsCalendarDay size={"20px"} />}
-          onClick={() => navigate("/booking")}
-        >
+        <SecondaryNavButton href={ROUTES.booking.path}>
           Another Booking
-        </PrimaryButton>
+        </SecondaryNavButton>
 
-        <SecondaryButton
-          icon={<AiOutlineHome size={"20px"} />}
-          onClick={() => navigate("/")}
-        >
+        <SecondaryNavButton href={ROUTES.home.path}>
           Back to Home
-        </SecondaryButton>
+        </SecondaryNavButton>
       </div>
     </>
   );

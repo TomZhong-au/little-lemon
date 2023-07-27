@@ -1,5 +1,8 @@
-import MenuCard from "./MenuCard";
-import { menuData } from "./menuData";
+import MenuCard from "./MenuCard/MenuCard";
+import { menuData } from "../../../mock/menuData";
+import styles from "./Special.module.css";
+import { ROUTES } from "../../../pages/routes";
+import { PrimaryNavButton } from "../../NavigationButton/NavigationButton";
 
 const Special = () => {
   return (
@@ -9,12 +12,13 @@ const Special = () => {
           className="flex-container"
           style={{ justifyContent: "space-between", alignItems: "center" }}
         >
-          <h1 className="special-title">This weeks special!</h1>
-          <a href="/" className="hero-cta">
+          <h1 className={styles.title}>This weeks special!</h1>
+          <PrimaryNavButton href={ROUTES.menu.path}>
             Online Menu
-          </a>
+          </PrimaryNavButton>
         </div>
-        <div className="menucard-wrapper">
+
+        <div className={styles.menuCardsWrapper}>
           {menuData.map((menu) => (
             <MenuCard {...menu} />
           ))}

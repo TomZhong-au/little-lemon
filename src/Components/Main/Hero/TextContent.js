@@ -1,10 +1,14 @@
+import { ROUTES } from "../../../pages/routes";
+import { PrimaryNavButton } from "../../NavigationButton/NavigationButton";
+
 const TextContent = () => {
   return (
     <div
       style={{
-        width: "30%",
+        width: "50%",
         display: "flex",
         flexDirection: "column",
+        paddingLeft: "1rem",
       }}
     >
       <h2 className="hero-title" aria-label="restaurant name">
@@ -17,9 +21,10 @@ const TextContent = () => {
         We are a family owned Mediterranean restaurant, focused on traditional
         recipes served with a modern twist.
       </span>
-      <a className="hero-cta" href="/booking" aria-label="booking button">
+
+      <PrimaryNavButton href={ROUTES.booking.path}>
         Reserve a Table
-      </a>
+      </PrimaryNavButton>
     </div>
   );
 };
