@@ -1,5 +1,5 @@
 import MenuCard from "./MenuCard/MenuCard";
-import { menuData } from "./menuData";
+import { menuData } from "../../../mock/menuData";
 import styles from "./Special.module.css";
 
 const Special = () => {
