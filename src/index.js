@@ -10,6 +10,7 @@ import BookingPage from "./pages/BookingPage";
 import BookingConfirmPage from "./pages/BookingConfirmPage";
 import { ROUTES } from "./pages/routes";
 import UnderConstruction from "./pages/UnderConstruction";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: ROUTES.login.path,
         element: <UnderConstruction />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },

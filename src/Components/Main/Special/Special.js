@@ -1,6 +1,8 @@
 import MenuCard from "./MenuCard/MenuCard";
 import { menuData } from "../../../mock/menuData";
 import styles from "./Special.module.css";
+import { ROUTES } from "../../../pages/routes";
+import { PrimaryNavButton } from "../../NavigationButton/NavigationButton";
 
 const Special = () => {
   return (
@@ -11,9 +13,9 @@ const Special = () => {
           style={{ justifyContent: "space-between", alignItems: "center" }}
         >
           <h1 className={styles.title}>This weeks special!</h1>
-          <a href="/" className="hero-cta">
+          <PrimaryNavButton href={ROUTES.menu.path}>
             Online Menu
-          </a>
+          </PrimaryNavButton>
         </div>
 
         <div className={styles.menuCardsWrapper}>

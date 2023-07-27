@@ -13,6 +13,7 @@
 
 body {
   font-family: "Karla", sans-serif;
+  color: var(--primary-green);
 }
 
 h1 {
@@ -28,6 +29,12 @@ h2 {
 
 h3 {
   font-family: "Markazi Text";
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.react-icon {
+  vertical-align: bottom;
 }
 
 .section-grid {
@@ -40,14 +47,15 @@ h3 {
 }
 
 .under-construction {
+  height: 70vh;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   min-height: 31.25rem;
-  padding: 1.875rem 0 1.875rem 0;
-  text-align: center;
+  padding: 5rem;
   color: var(--primary-green);
   border-top: 0.5rem solid var(--primary-green);
+  align-items: center;
 }
 
 .flex-container {
@@ -60,7 +68,7 @@ h3 {
 }
 
 .header-section {
-  padding: 0.5rem;
+  padding-top: 1rem;
 }
 
 .rounded {
@@ -135,27 +143,8 @@ footer a:visited {
   line-height: 141%;
 }
 
-.hero-cta {
-  width: 180px;
-  border-radius: 16px;
-  background-color: var(--primary-yellow);
-  padding: 1rem;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-}
-
-.hero-cta:visited {
-  color: black;
-}
-
 .booking-title {
-  font-size: var(--section-title);
-  font-family: "Markazi Text";
-  color: var(--primary-green);
+  letter-spacing: 4px;
 }
 
 .booking-section {
@@ -167,6 +156,7 @@ footer a:visited {
 
 .primary-btn {
   border-radius: 16px;
+  color: var(--primary-green);
   background-color: var(--primary-yellow);
   padding: 1rem;
   border: none;

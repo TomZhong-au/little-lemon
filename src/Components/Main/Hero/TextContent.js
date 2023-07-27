@@ -1,3 +1,6 @@
+import { ROUTES } from "../../../pages/routes";
+import { PrimaryNavButton } from "../../NavigationButton/NavigationButton";
+
 const TextContent = () => {
   return (
     <div
@@ -18,9 +21,10 @@ const TextContent = () => {
         We are a family owned Mediterranean restaurant, focused on traditional
         recipes served with a modern twist.
       </span>
-      <a className="hero-cta" href="/booking" aria-label="booking button">
+
+      <PrimaryNavButton href={ROUTES.booking.path}>
         Reserve a Table
-      </a>
+      </PrimaryNavButton>
     </div>
   );
 };

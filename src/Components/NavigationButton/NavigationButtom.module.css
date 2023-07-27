@@ -1,0 +1,46 @@
+.primary {
+  width: 180px;
+  border-radius: 1.5rem;
+  background-color: var(--primary-yellow);
+  padding: 0.75rem 1rem;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid var(--primary-yellow);
+  transition: 0.3s;
+}
+
+.primary:visited {
+  color: var(--primary-green);
+}
+
+.primary:hover {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.secondary {
+  min-width: 180px;
+  max-width: 250px;
+  border-radius: 0.75rem;
+  color: white;
+  background-color: var(--primary-green);
+  padding: 0.75rem;
+  font-size: 18px;
+  /* font-weight: bold; */
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  /* border: 2px solid var(--primary-yellow); */
+  transition: 0.3s;
+}
+
+.secondary:visited {
+  color: white;
+}
+
+.secondary:hover {
+  background-color: #628379;
+}

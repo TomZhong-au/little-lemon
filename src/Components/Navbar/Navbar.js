@@ -9,13 +9,11 @@ const Navbar = () => {
     <nav>
       <ul>
         {NAVLINKS.map(({ text, path }) => (
-          <li
-            key={text}
-            className={`${style.navlist} ${
-              pathname === path ? style.currentPage : ""
-            }`}
-          >
-            <a href={path} className="nav-link">
+          <li key={text}>
+            <a
+              href={path}
+              className={pathname === path ? style.currentPage : ""}
+            >
               {text}
             </a>
           </li>

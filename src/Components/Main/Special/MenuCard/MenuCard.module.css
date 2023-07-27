@@ -55,9 +55,9 @@
   font-weight: bold;
   font-size: 16px;
   border-radius: 1px;
-  color: var(--highlight-dark);
   cursor: pointer;
   transition: transform 0.3s;
+  color: var(--primary-green);
 }
 
 .deliveryBtn:active {
