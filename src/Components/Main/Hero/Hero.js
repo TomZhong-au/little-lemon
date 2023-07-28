@@ -3,7 +3,7 @@ import HeroImage from "./HeroImage";
 
 const Hero = () => {
   return (
-    <section className="section-grid hero-section">
+    <section className="hero-section">
       <div className="section-content-wrapper hero-content">
         <TextContent />
         <HeroImage />
