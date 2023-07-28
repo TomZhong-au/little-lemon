@@ -52,15 +52,15 @@ button {
 }
 
 section {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  /* margin-top: 3rem; */
+  margin-bottom: 5rem;
 }
 
 .react-icon {
   vertical-align: bottom;
 }
 
-.section-content-wrapper {
+.container {
   max-width: 61.625rem;
   margin-left: auto;
   margin-right: auto;
@@ -99,9 +99,8 @@ section {
   display: flex;
 }
 
-.header-wrapper {
-  justify-content: space-between;
-  align-items: center;
+.grid {
+  display: grid;
 }
 
 header {
@@ -117,36 +116,6 @@ footer {
   background-color: var(--primary-green);
   color: white;
 }
-/* ----------------------------------------- */
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-top: 1rem;
-}
-
-.footer-subtitle {
-  color: var(--primary-green);
-  font-weight: bold;
-}
-
-footer ul {
-  padding-left: 0;
-  list-style: none;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-footer a:visited {
-  color: black;
-}
-
-.footer-item-wrapper {
-  padding: 1rem 1rem;
-}
-
-/* --------------------------------------------------------- */
 
 .hero-image {
   object-fit: cover;

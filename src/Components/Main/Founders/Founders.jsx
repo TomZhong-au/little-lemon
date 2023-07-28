@@ -3,7 +3,7 @@ import styles from "./Founder.module.css";
 const Founders = () => {
   return (
     <section className="founders-section">
-      <div className="section-content-wrapper">
+      <div className="container">
         <div className={styles.wrapper}>
           <div className={styles.textContent}>
             <h1>Little Lemon</h1>

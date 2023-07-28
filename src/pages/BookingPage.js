@@ -18,7 +18,7 @@ const BookingPage = () => {
 
   return (
     <main className="section-grid" style={{ backgroundColor: "#edefee" }}>
-      <div className="section-content-wrapper flex-container booking-section">
+      <div className="container flex-container booking-section">
         <BookingForm
           availableTimes={availableTimes}
           changeTimes={dispatch}

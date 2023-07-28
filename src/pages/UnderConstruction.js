@@ -3,7 +3,7 @@ import { SecondaryNavButton } from "../Components/NavigationButton/NavigationBut
 import { ROUTES } from "./routes";
 const UnderConstruction = () => {
   return (
-    <div className=".section-content-wrapper under-construction">
+    <div className=".container under-construction">
       <div>
         <FaPersonDigging size="64px" />
       </div>

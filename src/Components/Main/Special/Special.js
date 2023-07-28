@@ -7,7 +7,7 @@ import { PrimaryNavButton } from "../../NavigationButton/NavigationButton";
 const Special = () => {
   return (
     <section className="special-section">
-      <div className="section-content-wrapper" style={{ marginBottom: "3rem" }}>
+      <div className="container" style={{ marginBottom: "3rem" }}>
         <div
           className="flex-container"
           style={{ justifyContent: "space-between", alignItems: "center" }}

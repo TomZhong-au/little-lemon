@@ -4,7 +4,7 @@ import { ROUTES } from "./routes";
 
 const NotFound = () => {
   return (
-    <div className=".section-content-wrapper under-construction">
+    <div className=".container under-construction">
       <div>
         <BiError size="64px" />
       </div>
