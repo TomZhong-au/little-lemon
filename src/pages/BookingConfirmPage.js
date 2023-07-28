@@ -6,7 +6,7 @@ const BookingConfirmPage = () => {
       className="section-grid"
       style={{ backgroundColor: "#edefee", height: "65vh" }}
     >
-      <div className="section-content-wrapper flex-container booking-section">
+      <div className="container flex-container booking-section">
         <ConfirmBooking />
       </div>
     </main>

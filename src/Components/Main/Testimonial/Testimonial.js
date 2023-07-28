@@ -5,7 +5,7 @@ import styles from "./Testimonial.module.css";
 const Testimonial = () => {
   return (
     <section className="testimonial-section">
-      <div className={`${styles.container} section-content-wrapper`}>
+      <div className={`${styles.container} container`}>
         <h2>What people say about us!</h2>
         {customerReviewData.map((review) => (
           <ReviewCard key={review.id} review={review} />

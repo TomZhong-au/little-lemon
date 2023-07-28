@@ -1,16 +1,14 @@
-@import "../../App.css";
-
-nav {
+.header-nav {
   width: 70%;
   padding: 0 1rem;
 }
-nav ul {
+.header-nav ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
 }
 
-nav a {
+.header-nav a {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--primary-green);
@@ -20,15 +18,15 @@ nav a {
   transition: 0.3s ease-in-out;
 }
 
-nav a:visited {
+.header-nav a:visited {
   color: var(--primary-green);
 }
 
-nav a:hover {
+.header-nav a:hover {
   background-color: gainsboro;
 }
 
-.currentPage {
+.current-page {
   font-weight: 600;
   background-color: var(--primary-yellow);
 }
