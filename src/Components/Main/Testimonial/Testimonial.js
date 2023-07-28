@@ -4,7 +4,7 @@ import styles from "./Testimonial.module.css";
 
 const Testimonial = () => {
   return (
-    <section className={styles.sectionBackground}>
+    <section className="testimonial-section">
       <div className={`${styles.container} section-content-wrapper`}>
         <h2>What people say about us!</h2>
         {customerReviewData.map((review) => (
