@@ -1,7 +1,5 @@
-@import "../../../../App.css";
-
 .cardWrapper {
-  /* width: 265px; */
+  width: 305px;
   min-height: 31.25rem;
   padding-bottom: 2.5rem;
   display: flex;

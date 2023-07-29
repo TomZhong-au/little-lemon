@@ -1,0 +1,29 @@
+.special-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.menucards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .special-title-row {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .special-title-row h1 {
+    font-size: 3rem;
+  }
+
+  .menucards-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
