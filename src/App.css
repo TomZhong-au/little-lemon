@@ -56,7 +56,7 @@ button {
 }
 
 section {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .react-icon {
@@ -78,13 +78,6 @@ section {
 .testimonial-section {
   background-color: var(--primary-green);
   padding: 2rem 0;
-}
-
-.hero-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 0;
 }
 
 .under-construction {
@@ -119,35 +112,6 @@ header {
 footer {
   background-color: var(--primary-green);
   color: white;
-}
-
-.hero-image {
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.hero-title {
-  color: var(--primary-yellow);
-  font-size: var(--section-title);
-  font-family: "Markazi Text";
-  font-weight: 500;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-  font-family: "Markazi Text";
-  color: white;
-  font-size: 32px;
-  margin-bottom: 1rem;
-}
-
-.hero-text {
-  color: white;
-  margin-bottom: 2rem;
-  font-weight: 300;
-  width: 85%;
-  line-height: 141%;
 }
 
 .booking-title {

@@ -1,19 +1,13 @@
-import { ROUTES } from "../../../pages/routes";
-import { PrimaryNavButton } from "../../NavigationButton/NavigationButton";
+import { ROUTES } from "../../../../pages/routes";
+import { PrimaryNavButton } from "../../../NavigationButton/NavigationButton";
+import "./TextContent.css";
 
 const TextContent = () => {
   return (
-    <div
-      style={{
-        width: "50%",
-        display: "flex",
-        flexDirection: "column",
-        paddingLeft: "1rem",
-      }}
-    >
-      <h2 className="hero-title" aria-label="restaurant name">
+    <div className="hero-text-content">
+      <h1 className="hero-title" aria-label="restaurant name">
         Little Lemon
-      </h2>
+      </h1>
       <span className="hero-subtitle" aria-label="restaurant location">
         Chicago
       </span>

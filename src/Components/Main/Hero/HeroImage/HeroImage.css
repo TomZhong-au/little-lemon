@@ -1,0 +1,7 @@
+.hero-image {
+  object-fit: cover;
+  border-radius: 16px;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  padding-block: 0.5rem;
+}
