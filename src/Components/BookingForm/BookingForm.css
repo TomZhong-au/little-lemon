@@ -1,0 +1,46 @@
+.booking-input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.375rem;
+  border-width: 0;
+  width: 100%;
+  color: #111827;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  margin: 1rem 0;
+  font-family: "Karla", sans-serif;
+}
+
+.booking-input:focus {
+  outline: 1px solid var(--primary-green);
+  outline-offset: 3px;
+}
+
+select option {
+  padding: 1.2rem;
+}
+
+.booking-err-msg {
+  color: rgb(194, 2, 2);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.booking-section form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+.booking-submit-btn {
+  margin-block: 1rem;
+  padding: 0.5rem;
+  background-color: var(--primary-yellow);
+  border-radius: 0.375rem;
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.booking-submit-btn:disabled {
+  background-color: gray;
+  color: rgb(71, 71, 71);
+}

@@ -1,9 +1,5 @@
-.site-footer {
-  background-color: #495e57;
-  color: #ffffff;
-}
-
-.site-footer .container {
+.footer-grid {
+  display: grid;
   grid-template-columns: repeat(4, auto);
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -81,8 +77,8 @@ a[data-company="youtube"]:hover {
 
 /*-- Media queries ------------------------------------------------------*/
 
-@media (max-width: 927px) {
-  .site-footer .container {
+@media (max-width: 1024px) {
+  .footer-grid {
     grid-template-columns: repeat(3, auto);
     grid-template-rows: auto auto;
   }
@@ -94,8 +90,8 @@ a[data-company="youtube"]:hover {
   }
 }
 
-@media (max-width: 789px) {
-  .site-footer .container {
+@media (max-width: 768px) {
+  .footer-grid {
     grid-template-columns: auto auto;
   }
 
@@ -111,26 +107,29 @@ a[data-company="youtube"]:hover {
 }
 
 @media (max-width: 576px) {
-  .site-footer .container {
-    grid-template-columns: auto;
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "logo     sitemap"
+      "contact  contact"
+      "social   social";
+    justify-items: center;
   }
 
   .site-footer-logo {
-    grid-row: 1;
+    grid-area: logo;
   }
 
   .site-footer-nav {
-    grid-column: 1;
-    grid-row: 2;
-    margin-top: 2rem;
+    grid-area: sitemap;
   }
 
   .site-footer-contact {
-    grid-row: 3;
+    grid-area: contact;
   }
 
   .site-footer-social {
-    grid-column: 1;
-    grid-row: 4;
+    grid-area: social;
   }
 }

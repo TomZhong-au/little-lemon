@@ -1,30 +1,26 @@
 import { useEffect } from "react";
-import { PrimaryButton } from "../Buttons";
 import { Formik, Form, Field, ErrorMessage, useFormikContext } from "formik";
 import { initialValues, validationSchema } from "./formik";
+import "./BookingForm.css";
+const today = new Date().toISOString().split("T")[0];
 
 const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
   return (
     <>
-      <h1 className="booking-title">Book a Table</h1>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={(values) => submitForm(values)}
       >
         {(formik) => (
-          <Form
-            style={{
-              width: "350px",
-              marginBottom: "2rem",
-            }}
-          >
+          <Form>
             <label htmlFor="res-date">Choose date</label>
             <Field
               className="booking-input"
               type="date"
               id="res-date"
               name="date"
+              min={today}
             />
             <div className="booking-err-msg">
               <ErrorMessage name="date" />
@@ -73,17 +69,15 @@ const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
             <div className="booking-err-msg">
               <ErrorMessage name="occasion" />
             </div>
+            <FormikObserver changeTimes={changeTimes} />
 
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                marginTop: "2rem",
-              }}
+            <button
+              type="submit"
+              disabled={!formik.isValid}
+              className="booking-submit-btn"
             >
-              <PrimaryButton disabled={!formik.isValid}>Confirm</PrimaryButton>
-              <FormikObserver changeTimes={changeTimes} />
-            </div>
+              Confirm Booking
+            </button>
           </Form>
         )}
       </Formik>
