@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import { ROUTES } from "../../../../pages/routes";
-import { PrimaryNavButton } from "../../../NavigationButton/NavigationButton";
 import "./TextContent.css";
 
 const TextContent = () => {
@@ -16,9 +16,9 @@ const TextContent = () => {
         recipes served with a modern twist.
       </span>
 
-      <PrimaryNavButton href={ROUTES.booking.path}>
+      <Link to={ROUTES.booking.path} className="cta">
         Reserve a Table
-      </PrimaryNavButton>
+      </Link>
     </div>
   );
 };

@@ -1,7 +1,12 @@
 export const ROUTES = {
   home: { text: "Home", path: "/", isAnchor: true },
   about: { text: "About", path: "/about", isAnchor: true },
-  menu: { text: "Menu", path: "/menu", isAnchor: true },
+  menu: {
+    text: "Menu",
+    path: "./assets/menu.webp",
+    isAnchor: true,
+    type: "file",
+  },
   booking: { text: "Reservations", path: "/booking", isAnchor: true },
   order: { text: "Order Online", path: "/order", isAnchor: true },
   login: { text: "Login", path: "/login", isAnchor: true },

@@ -28,16 +28,17 @@ const Header = () => {
             <FontAwesomeIcon icon={faBars} size="2x" />
           )}{" "}
         </button>
-        {/* <Navbar /> */}
         <ul
           className={isShown ? "nav-bar-links expanded" : "nav-bar-links"}
           onClick={toggleMenu}
         >
-          {NAVLINKS.map(({ text, path }) => (
+          {NAVLINKS.map(({ text, path, type }) => (
             <li key={text}>
               <a
                 href={path}
-                className={pathname === path ? "current-page" : ""}
+                className={pathname === path ? "current-page" : "other-page"}
+                rel="noopener noreferrer"
+                target={type === "file" ? "_blank" : "_self"}
               >
                 {text}
               </a>

@@ -1,7 +1,6 @@
 import MenuCard from "./MenuCard/MenuCard";
 import { menuData } from "../../../mock/menuData";
 import { ROUTES } from "../../../pages/routes";
-import { PrimaryNavButton } from "../../NavigationButton/NavigationButton";
 import "./Special.css";
 
 const Special = () => {
@@ -10,14 +9,19 @@ const Special = () => {
       <div className="container">
         <div className="special-title-row">
           <h1>This weeks special!</h1>
-          <PrimaryNavButton href={ROUTES.menu.path}>
+          <a
+            href={ROUTES.menu.path}
+            className="cta special-menu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Online Menu
-          </PrimaryNavButton>
+          </a>
         </div>
 
         <div className="menucards-container">
           {menuData.map((menu) => (
-            <MenuCard {...menu} />
+            <MenuCard {...menu} key={menu.name} />
           ))}
         </div>
       </div>

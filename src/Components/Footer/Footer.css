@@ -21,6 +21,9 @@
   color: #ffffff;
   transition: color 0.5s;
 }
+.site-footer a:visited {
+  color: #ffffff;
+}
 
 .site-footer a:hover,
 .site-footer a:focus {
