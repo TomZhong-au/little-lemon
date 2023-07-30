@@ -1,0 +1,31 @@
+.hero-text-content {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  justify-content: center;
+}
+
+.hero-title {
+  color: var(--primary-yellow);
+  font-size: var(--section-title);
+  font-family: "Markazi Text";
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-family: "Markazi Text";
+  color: white;
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  width: 85%;
+  line-height: 141%;
+}

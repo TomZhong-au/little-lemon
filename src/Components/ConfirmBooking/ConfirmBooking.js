@@ -1,7 +1,8 @@
 import BookingInfoTable from "./BookingInfoTable";
 import { useEffect, useState } from "react";
-import { SecondaryNavButton } from "../NavigationButton/NavigationButton";
 import { ROUTES } from "../../pages/routes";
+import { Link } from "react-router-dom";
+import "./ConfirmBooking.css";
 
 const ConfirmBooking = () => {
   const [bookingInfo, setBookingInfo] = useState({});
@@ -12,26 +13,19 @@ const ConfirmBooking = () => {
 
   return (
     <>
-      <h1 className="booking-title">Booking Success </h1>
+      <h3 className="confirm-title">Your booking has been confirmed:</h3>
 
-      <h3>Your booking informaiton:</h3>
       <BookingInfoTable bookinginfo={bookingInfo} />
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          width: "50%",
-          marginTop: "5rem",
-        }}
-      >
-        <SecondaryNavButton href={ROUTES.booking.path}>
-          Another Booking
-        </SecondaryNavButton>
-
-        <SecondaryNavButton href={ROUTES.home.path}>
-          Back to Home
-        </SecondaryNavButton>
+      <div className="confirm-nav-wrapper">
+        <Link to={ROUTES.booking.path} className="confirm-nav-button">
+          {" "}
+          Another Booking{" "}
+        </Link>
+        <Link to={ROUTES.home.path} className="confirm-nav-button">
+          {" "}
+          Back to Home{" "}
+        </Link>
       </div>
     </>
   );

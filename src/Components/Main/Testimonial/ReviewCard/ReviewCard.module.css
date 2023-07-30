@@ -1,6 +1,7 @@
 .cardWrapper {
-  grid-column: auto;
-  grid-row: 2;
+  /* grid-column: auto;
+  grid-row: 2; */
+  max-width: 300px;
   min-height: 22.75rem;
   display: flex;
   flex-direction: column;
@@ -28,8 +29,8 @@
 /*-- Media queries ------------------------------------------------------*/
 
 @media (max-width: 949px) {
-  .cardWrapper {
+  /* .cardWrapper {
     grid-column: auto;
     grid-row: auto;
-  }
+  } */
 }

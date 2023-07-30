@@ -1,5 +1,6 @@
-import TextContent from "./TextContent";
-import HeroImage from "./HeroImage";
+import TextContent from "./HeroContent/TextContent";
+import HeroImage from "./HeroImage/HeroImage";
+import "./Hero.css";
 
 const Hero = () => {
   return (

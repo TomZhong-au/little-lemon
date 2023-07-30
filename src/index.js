@@ -28,10 +28,10 @@ const router = createBrowserRouter([
         path: ROUTES.confirm.path,
         element: <BookingConfirmPage />,
       },
-      {
-        path: ROUTES.menu.path,
-        element: <UnderConstruction />,
-      },
+      // {
+      //   path: ROUTES.menu.path,
+      //   element: <UnderConstruction />,
+      // },
       {
         path: ROUTES.about.path,
         element: <UnderConstruction />,
@@ -50,6 +50,10 @@ const router = createBrowserRouter([
         element: <NotFound />,
       },
     ],
+  },
+  {
+    path: ROUTES.menu.path,
+    element: <UnderConstruction />,
   },
 ]);
 

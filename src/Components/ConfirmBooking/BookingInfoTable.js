@@ -16,12 +16,12 @@ const BookingInfoTable = ({ bookinginfo }) => {
 
         <tr>
           <td>Guests</td>
-          <td>&nbsp;&nbsp;{guests}</td>
+          <td>{guests}</td>
         </tr>
 
         <tr>
           <td>Occasion</td>
-          <td>&nbsp;&nbsp;{occasion}</td>
+          <td>{occasion}</td>
         </tr>
       </tbody>
     </table>

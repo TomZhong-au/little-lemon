@@ -30,7 +30,7 @@ const socials = [
 const Footer = () => {
   return (
     <footer className="site-footer">
-      <div className="container grid">
+      <div className="container footer-grid">
         <img
           className="site-footer-logo"
           src="./assets/logo-white.png"

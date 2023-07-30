@@ -1,26 +1,27 @@
 import MenuCard from "./MenuCard/MenuCard";
 import { menuData } from "../../../mock/menuData";
-import styles from "./Special.module.css";
 import { ROUTES } from "../../../pages/routes";
-import { PrimaryNavButton } from "../../NavigationButton/NavigationButton";
+import "./Special.css";
 
 const Special = () => {
   return (
     <section className="special-section">
-      <div className="container" style={{ marginBottom: "3rem" }}>
-        <div
-          className="flex-container"
-          style={{ justifyContent: "space-between", alignItems: "center" }}
-        >
-          <h1 className={styles.title}>This weeks special!</h1>
-          <PrimaryNavButton href={ROUTES.menu.path}>
+      <div className="container">
+        <div className="special-title-row">
+          <h1>This weeks special!</h1>
+          <a
+            href={ROUTES.menu.path}
+            className="cta special-menu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Online Menu
-          </PrimaryNavButton>
+          </a>
         </div>
 
-        <div className={styles.menuCardsWrapper}>
+        <div className="menucards-container">
           {menuData.map((menu) => (
-            <MenuCard {...menu} />
+            <MenuCard {...menu} key={menu.name} />
           ))}
         </div>
       </div>
