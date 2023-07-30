@@ -15,7 +15,7 @@ import "./Footer.css";
 import { NAVLINKS } from "../../pages/routes";
 
 const contacts = [
-  { icon: faLocationDot, info: "1 Darling St, Kings Cross, Sydney" },
+  { icon: faLocationDot, info: "43 E Ohio St, Chicago, IL 60611" },
   { icon: faPhone, info: "(012) 345-6789" },
   { icon: faEnvelope, info: "hello@littlelemon.com" },
 ];
