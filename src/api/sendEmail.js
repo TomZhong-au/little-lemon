@@ -8,14 +8,17 @@ export default function sendEmail(formData) {
     subject: "🍋 Booking Confirmation 🍋",
     content: generateHtmlContent(formData),
   };
-
-  fetch(LAMBDA_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
+  try {
+    fetch(LAMBDA_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function generateHtmlContent(formData) {
