@@ -69,6 +69,23 @@ const BookingForm = ({ availableTimes, changeTimes, submitForm }) => {
             <div className="booking-err-msg">
               <ErrorMessage name="occasion" />
             </div>
+
+            <label htmlFor="username">Your Name</label>
+            <Field
+              id="username"
+              name="username"
+              className="booking-input"
+            ></Field>
+            <div className="booking-err-msg">
+              <ErrorMessage name="username" />
+            </div>
+
+            <label htmlFor="email">Email Address</label>
+            <Field id="email" name="email" className="booking-input"></Field>
+            <div className="booking-err-msg">
+              <ErrorMessage name="email" />
+            </div>
+
             <FormikObserver changeTimes={changeTimes} />
 
             <button

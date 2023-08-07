@@ -5,6 +5,8 @@ export const initialValues = {
   time: "18:00",
   guests: 1,
   occasion: "Anniversary",
+  username: "",
+  email: "",
 };
 
 export const validationSchema = Yup.object().shape({
@@ -36,4 +38,6 @@ export const validationSchema = Yup.object().shape({
     }),
   guests: Yup.number().required().max(10).min(1),
   occasion: Yup.string().required(),
+  username: Yup.string().min(2).required(),
+  email: Yup.string().email().required(),
 });

@@ -4,13 +4,14 @@ import { updateTimes } from "../Components/BookingForm/reducer";
 import { initialzeTimes } from "../Components/BookingForm/reducer";
 import { useNavigate } from "react-router-dom";
 import "./BookingPage.css";
+import { submitAPI } from "../mock/API.mock";
 
 const BookingPage = () => {
   const [availableTimes, dispatch] = useReducer(updateTimes, initialzeTimes());
   const navigate = useNavigate();
 
   const submitForm = (formData) => {
-    const result = submitAPI(formData); //eslint-disable-line
+    const result = submitAPI(formData);
     if (!result) return;
     localStorage.setItem("confirmedBooking", JSON.stringify(formData));
     navigate("/confirm");
