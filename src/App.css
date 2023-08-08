@@ -43,6 +43,7 @@ h3 {
 }
 
 a {
+  color: var(--primary-green);
   text-decoration: none;
 }
 
@@ -150,6 +151,7 @@ footer {
 }
 
 .cta {
+  color: var(--primary-green);
   width: 180px;
   border-radius: 1.5rem;
   background-color: var(--primary-yellow);
