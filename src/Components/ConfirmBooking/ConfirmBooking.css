@@ -24,6 +24,10 @@
   color: var(--primary-yellow);
 }
 
+.confirm-msg {
+  margin-top: 1rem;
+}
+
 @media (max-width: 400px) {
   .confirm-nav-wrapper {
     width: 100%;

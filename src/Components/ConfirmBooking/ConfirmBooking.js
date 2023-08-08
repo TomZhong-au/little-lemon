@@ -17,6 +17,7 @@ const ConfirmBooking = () => {
 
       <BookingInfoTable bookinginfo={bookingInfo} />
 
+      <p className="confirm-msg">You will soon receive a confirmation email.</p>
       <div className="confirm-nav-wrapper">
         <Link to={ROUTES.booking.path} className="confirm-nav-button">
           {" "}
